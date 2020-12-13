@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto2</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  </head>
+  <body id="body">
+    <header id="header" class="header">
+      <a href="index.html"
+        ><img id="logo" class="logo" src="./assets/logo-mobile.svg" alt="logo"
+      /></a>
+      <i id="button" class="fas fa-bars"></i>
+      <nav id="opcs-menu" class="disabled-menu">
+        <ul class="ul">
+          <li>
+            <a id="mode-dark" class="nocturno" href="#nocturno"
+              >Modo Nocturno</a
+            >
+          </li>
+          <li class="line-white"></li>
+          <li>
+            <a id="button-fav" class="favoritos" href="#favoritos">Favoritos</a>
+          </li>
+          <li class="line-white"></li>
+          <li><a id="button-gif" class="gifos" href="#gifos">Mis GIFOS</a></li>
+          <li class="line-white"></li>
+          <li>
+            <a href="#gifos"
+              ><img
+                id="create-gifo"
+                class="create-gifo"
+                src="./assets/button-crear-gifo.svg"
+                alt="crear-gifo"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="section-1" class="section-1">
+        <h1 id="h1" class="h1">
+          Inspírate, busca, guarda, y crea <br />
+          los mejores <span>GIFOS</span>
+        </h1>
+        <img
+          id="ilustra"
+          class="ilustra"
+          src="./assets/ilustra_header.svg"
+          alt="ilustra"
+        />
+        <div id="submit">
+        <form class="form" id="form">
+          <input
+            id="input-text"
+            class="buscar"
+            type="text"
+            placeholder="Busca GIFOS y más"
+          />
+          <button class="button-hide" type="submit"><i id="search-icon" class="fas fa-search"></i></button>
+          <i id="close-icon" class="fas fa-times hide"></i>
+          <div id="container-suggestions" class="suggestions">
+          </div>
+        </form>
+      </div>
+      </section>
+      <section id="section-2" class="section-2">
+        <h2>Trending</h2>
+        <h3 id="h3-trending">
+        </h3>
+      </section>
+      <!-- SECCION BUSCAR -->
+      <section id="hide-section" class="disabled-section">
+        <div id="div-line-grey" class="line-grey"></div>
+        <h2 id="h2">Resultado de la busqueda</h2>
+        <div id="container-img" class="container-imgMax"></div>
+        <div id="container" class="container-gifos"></div>
+        <div class="disabled-results-more" id="results-more"></div>
+        <a id="see-more" class="see-more"><span>VER MAS</span></a>
+      </section>
+      <!-- MIS GIFOS -->
+      <section id="gifos" class="disabled-gifos">
+        <img
+          id="gif-con-contenido"
+          src="./assets/icon-mis-gifos.svg"
+          alt="Icono mis gifos con contenido"
+          class="misgif-contenido"
+        />
+        <h2 class="titulo-misgifos" id="titulo-misgifos">Mis GIFOS</h2>
+        <img
+          id="gif-sin-contenido"
+          src="./assets/icon-mis-gifos-sin-contenido.svg"
+          alt="Icono mis gifos sin contenido"
+          class="misgif-sincontenido"
+        />
+        <h3 id="text-mg-sc">¡Anímate a crear tu primer GIFO!</h3>
+        <div id="mis-gifos" class="container-misgifos"></div>
+        <h4 id="ver-mas" class="ver-mas"><span>VER MÁS</span></h4>
+      </section>
+      <!-- FAVORITOS -->
+      <section id="favoritos" class="disabled-fav">
+        <img
+          id="icon-fav"
+          class="logo-fav"
+          src="./assets/icon-favoritos.svg"
+          alt="gifos"
+        />
+        <h2 id="h2-fav">Favoritos</h2>
+        <img
+          class="imagen-sin-fav"
+          id="fav-sin-contenido"
+          src="./assets/icon-fav-sin-contenido.svg"
+          alt="sin-contenido"
+        />
+        <h3 id="h3-fav" class="h3-fav">
+          "¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"
+        </h3>
+        <div id="gif-fav" class="container-favoritos"></div>
+        <div class="disabled-results-more" id="results-more-favoritos"></div>
+        <a id="see-more3" class="see-more3" href="#"><span>VER MAS</span></a>
+      </section>
+      <!--GRABAR -->
+      <section id="grabargif" class="grabargif">
+        <div id="camara-completa" class="camara-completa">
+          <img src="./assets/camara.svg" alt="Camara" id="camara" />
+          <img
+            src="./assets/element-luz-camara.svg"
+            alt="Luz camara"
+            id="camara-luz"
+          />
+        </div>
+        <div id="zonaGrabacion" class="zonaGrabacion">
+          <div id="grabacion" class="grabacion">
+            <div id="sup-izq"></div>
+            <div id="sup-der"></div>
+            <div id="centrograbacion">
+              <p id="instructivo">
+                Aquí podrás<br />crear tus propios
+                <span id="gifos-celeste">GIFOS</span>
+              </p>
+              <p id="detalle">
+                ¡Crea tu GIFO en sólo 3 pasos!<br />(sólo necesitas una cámara
+                para grabar un video)
+              </p>
+            </div>
+            <div id="inf-izq"></div>
+            <div id="inf-der"></div>
+          </div>
+          <div id="pasos">
+            <h5 id="paso1" class="pasos">1</h5>
+            <h5 id="paso2" class="pasos">2</h5>
+            <h5 id="paso3" class="pasos">3</h5>
+          </div>
+        </div>
+        <div class="pelicula">
+          <img src="./assets/pelicula.svg" id="pelicula" alt="Pelicula" />
+        </div>
+        <div id="foot" class="foot">
+          <div id="division" class="division"></div>
+          <h4 id="comenzar" class="comenzar">COMENZAR</h4>
+        </div>
+      </section>
+      <!-- TRENDING -->
+      <section id="section-3" class="section-3">
+        <h2 id="h2-trending">Trending GIFOS</h2>
+        <h3 id="h3">
+          Mira los últimos<br />
+          GIFOS de nuestra comunidad.
+        </h3>
+        <div class="trending-box">
+          <div id="scroll-left" class="scroll-left">
+            <i id="chevron-left" class="fas fa-chevron-left"></i>
+          </div>
+          <div class="trendng-gif" id="container-trending"></div>
+          <div id="scroll-right" class="scroll-right">
+            <i id="chevron-right" class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <h2>Compartir en:</h2>
+      <div class="social-media">
+        <a href="https://www.facebook.com/" target="blank"
+          ><img class="fb" src="./assets/icon_facebook.svg" alt="facebook"
+        /></a>
+        <a href="https://www.twitter.com/" target="blank"
+          ><img class="tw" src="./assets/icon-twitter.svg" alt="twitter"
+        /></a>
+        <a href="https://www.instagram.com/" target="blank"
+          ><img class="inst" src="./assets/icon_instagram.svg" alt="instagram"
+        /></a>
+      </div>
+      <h3>© GIFOS 2020 All Rights Reserved.</h3>
+    </footer>
+    <script src="/js/secundario.js"></script>
+    <script src="/js/principal.js"></script>
+    <script src="/js/trending.js"></script>
+    <script src="/js/favoritos.js"></script>
+    <script src="/js/misGifos.js"></script>
+    <script src="/js/gifosMax.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+@import "baserules";
+.header {
+  width: 100%;
+  min-height: 95px;
+  max-height: 600;
+
+  .logo {
+    width: 48.8px;
+    height: 48.8px;
+    margin-top: 20px;
+    margin-left: 22px;
+    body.dark & {
+      color: #ffffff;
+    }
+  }
+  .fas {
+    color: #572ee5;
+    position: relative;
+    top: -10px;
+    left: 260px;
+    body.dark & {
+      color: #ffffff;
+    }
+  }
+
+  .disabled-menu {
+    display: none;
+  }
+  .enabled-menu {
+    width: 100%;
+    background: rgba(87, 46, 229, 0.9);
+    min-height: 484px;
+    margin-top: 10px;
+    max-height: 484px;
+    position: absolute;
+    ul {
+      list-style: none;
+    }
+
+    body.dark & {
+      background: #000000;
+    }
+    .nocturno {
+      text-decoration: none;
+      font-family: Montserrat-Bold;
+      font-size: 15px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 60px;
+      margin-left: 136px;
+
+      body.dark & {
+        color: #ffffff;
+      }
+      
+    }
+
+    .favoritos {
+      text-decoration: none;
+      font-family: Montserrat-Bold;
+      font-size: 15px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 60px;
+      margin-left: 158px;
+      body.dark & {
+        color: #ffffff;
+      }
+     
+    }
+    .gifos {
+      text-decoration: none;
+      font-family: Montserrat-Bold;
+      font-size: 15px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 60px;
+      margin-left: 151px;
+      body.dark & {
+        color: #ffffff;
+      }
+    }
+    .line-white {
+      opacity: 0.5;
+      border: 1px solid #ffffff;
+      width: 41px;
+      height: 0.1px;
+      margin-left: 167px;
+      list-style: none;
+    }
+    .create-gifo {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+/*MEDIA*/
+$mobile: "screen and (max-width: 640px)";
+$desktop: "screen and (min-width: 641px)";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    width: 100%;
+   border-top: 5px solid #572ee5;
+    &.dark {
+        background: #37383C;
+        border-top: 5px solid #37383C;
+      }
+     
+    
+}
+.hidden{
+    display: none;
+}
+
